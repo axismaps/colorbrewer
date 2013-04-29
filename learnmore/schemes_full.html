@@ -1,0 +1,38 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		body { width: 600px; font: 13px/18px 'Droid Sans', sans-serif; }
+		a { color: #669; text-decoration:none;}
+		a:hover { text-decoration: underline; }
+	</style>
+	<title>Color scheme types - ColorBrewer</title>
+</head>
+<body>
+<div style="margin-bottom:10px;margin-top:-5px;">
+<p style="display:inline-block;width:65%;vertical-align:top;"><strong>1. Sequential schemes</strong> are suited to ordered data that progress from low to high. Lightness steps dominate the look of these schemes, with light colors for low data values to dark colors for high data values.</p>
+<img src="sequential.png" alt="sequential" style="float:right"/>
+</div>
+<div style="margin-bottom:10px">
+<a name="diverging"></a><p style="display:inline-block;width:65%;vertical-align:top;"><strong>2. Diverging schemes</strong> put equal emphasis on mid-range critical values and extremes at both ends of the data range. The critical class or break in the middle of the legend is emphasized with light colors and low and high extremes are emphasized with dark colors that have contrasting hues.</p>
+<img src="diverging.png" alt="diverging" style="float:right"/>
+<p style="width:65%;">Diverging schemes are most effective when the class break in the middle of the sequence, or the lightest middle color, is meaningfully related to the mapped data. Use the break or class emphasized by a hue and lightness change to represent a critical value in the data such as the mean, median, or zero. Colors increase in darkness to represent differences in both directions from this meaningful mid-range value in the data.</p>
+<img src="criticalvalue.png" alt="critical value"/>
+<p style="width:65%;">NOTE:  Although we have designed the diverging schemes to be symmetrical, you may need to customize schemes by moving the critical break/class closer to one end of the sequence to suit your map data. For example, a map of population change might have two classes of population loss and five classes of growth, requiring a scheme with only two colors on one side of a zero-change break and five on the other. Choose a scheme with ten-colors and omit three colors from the loss side of the scheme.</p>
+</div>
+<div style="margin-bottom:10px">
+<a name="qualitative"></a><p style="display:inline-block;width:65%;vertical-align:top;"><strong>3. Qualitative schemes</strong> do not imply magnitude differences between legend classes, and hues are used to create the primary visual differences between classes. Qualitative schemes are best suited to representing nominal or categorical data.</p>
+<img src="qualitative.png" alt="qualitative" style="float:right"/>
+<p style="width:65%;">Most of the qualitative schemes rely on differences in hue with only subtle lightness differences between colors. You may pick a subset of colors from a legend with more classes if you are not pleased with the subsets. For example, you could pick four colors from a seven-color legend. Two exceptions to the use of consistent lightness:</p>
+<img src="paired.png" alt="paired scheme" style="float:left;clear:both;margin-right:15px;"/>
+<p style="width:65%;height:100px;"><strong>Paired Scheme</strong>:  This scheme presents a series of lightness pairs for each hue (e.g. light green and dark green). Use this when you have categories that should be visually related, though they are not explicitly ordered. For example, 'forest' and 'woodland' would be suitably represented with dark and light green.</p>
+<img src="accent.png" alt="accent scheme" style="float:left;clear:both;margin-right:15px;"/>
+<p style="width:65%;height:100px;"><strong>Accent Scheme:</strong> Use to accent small areas or important classes with colors that are more saturated/darker/lighter than others in the scheme - found at the bottom of the 'Accents' legends.  Beware of emphasizing unimportant classes when you use qualitative schemes.</p>
+</div>
+<div class="further-reading" style="border-top:1px solid #999">
+	<h4>Further reading</h4>
+	<p><a href="http://www.personal.psu.edu/faculty/c/a/cab38/ColorSch/SchHome.html" target="_blank">Brewer, Cynthia A. 1994. Color use guidelines for mapping and visualization. Chapter 7 (pp. 123-147) in Visualization in Modern Cartography</a></p>
+<p><a href="http://www.personal.psu.edu/faculty/c/a/cab38/Brewer_pubs.html" target="_blank">Other cartography publications by Cynthia Brewer</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ColorBrewer: Color Advice for Maps</title>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="spectrum.css">
+		<script type="text/javascript" src="colorbrewer_schemes.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="jquery.svg.min.js" type="text/javascript"></script>
+		<script src="jquery.svgdom.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="spectrum.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="left">
+				<div id="number" class="section">
+					<div class="learn-more" id="number-learn-more" title="Learn more"></div>
+					<p>Number of data classes:</p>
+					<select id="num-classes">
+						<option name="3">3</option>
+						<option name="4">4</option>
+						<option name="5">5</option>
+						<option name="6">6</option>
+						<option name="7">7</option>
+						<option name="8">8</option>
+						<option name="9">9</option>
+						<option name="10">10</option>
+						<option name="11">11</option>
+						<option name="12">12</option>
+					</select>
+				</div>
+				<div id="type" class="section">
+					<div class="learn-more" id="schemes-learn-more" title="Learn more"></div>
+					<p>Nature of your data:</p>
+					<input type="radio" class="scheme-type" name="scheme-type" id="sequential" checked/><label class="check-label" for="sequential">sequential</label>
+					<input type="radio" class="scheme-type" name="scheme-type" id="diverging"/><label class="check-label" for="diverging">diverging</label>
+					<input type="radio" class="scheme-type" name="scheme-type" id="qualitative"/><label class="check-label" for="qualitative">qualitative</label>
+				</select>
+				</div>
+				<div id="scheme" class="section">
+					<p>Pick a color scheme:</p>
+					<div id="ramps"></div>
+					<div id="singlehue"></div>
+				</div>
+				<div id="colors" class="section">
+					<div id="options">
+						<div class="learn-more" id="filters-learn-more" title="Learn more"></div>
+						<p>Only show:</p>
+						<div id="filters">
+							<input type="checkbox" id="blindcheck" /><label for="blindcheck">colorblind safe</label><br/>
+							<input type="checkbox" id="printcheck" /><label for="printcheck">print friendly</label><br/>
+							<input type="checkbox" id="copycheck" /><label for="copycheck">photocopy safe</label>
+						</div>
+						<div class="learn-more" id="context-learn-more"></div>
+						<p>Context:</p>
+						<div id="layers">
+							<input type="checkbox" id="roadscheck" /><label for="roadscheck">roads</label><input class="color" type="text" id="road-color"/><br/>
+							<input type="checkbox" id="citiescheck" /><label for="citiescheck">cities</label><input class="color" type="text" id="city-color"/><br/>
+							<input type="checkbox" id="borderscheck" checked /><label for="borderscheck">borders</label><input class="color" type="text" id="border-color"/><br/>
+						</div>
+						<p>Background:</p>
+						<div id="background">
+							<input type="radio" name="background-radio" id="solid-color" checked/><label class="check-label" for="solid-color">solid color</label><input class="color" type="text" id="bg-color"/><br/>
+							<input type="radio" name="background-radio" id="terrain"/><label class="check-label" for="terrain">terrain</label>
+							<div id="transparency-container">
+								<div id="transparency-track"></div>
+								<div id="transparency-slider"></div>
+								<p>color transparency</p>
+							</div>
+						</div>
+					</div>
+					<div id="system">
+						<p id="scheme-name">BuGn</p>
+						<div style="height:27px">
+							<div class="score-icon ok" id="blind-icon"></div>
+							<div class="score-icon ok" id="copy-icon"></div>
+							<div class="score-icon ok" id="screen-icon"></div>
+							<div class="score-icon ok" id="print-icon"></div>
+						</div>
+						<select id="color-system">
+							<option>HEX</option>
+							<option>RGB</option>
+							<option>CMYK</option>
+						</select>
+						<div id="color-chips"></div>
+						<div id="color-values"></div>
+					</div>
+				</div>
+			</div>
+			<div id="header">
+				<p id="nav"><a id="how" href="#">how to use</a> | <a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_updates.html" target="blank">updates</a> | <a id="credits" href="#">credits</a></p>
+				<h1>COLOR<span>BREWER</span> 2.0</h1>
+				<h3>color advice for cartography</h3>
+			</div>
+			<div id="map-container">
+				<div id="counties" class="svg-container"></div>
+				<div id="overlays" class="svg-container"></div>
+			</div>
+			<div id="export">
+				<div id="tab"><div>EXPORT</div></div>
+				<div>
+					<h3>ArcGIS</h3>
+					<p>You can now run ColorBrewer directly inside ArcGIS 9.X thanks to the National Cancer Institute (NCI).</p>
+					<a href="http://gis.cancer.gov/tools/colortool/" target="_blank">&gt;&gt; Download ColorTool</a>
+				</div>
+				<div>
+					<h3>Adobe</h3>
+					<p>Download an Adobe Swatch Exchange (ASE) file so you can load ColorBrewer schemes into Illustrator or Photoshop.</p>
+					<a id="ase" href="#" target="_blank">&gt;&gt; Download Scheme as ASE</a>
+				</div>
+				<div>
+					<h3>Excel</h3>
+					<p>Download a Microsoft Excel file with all 165 color schemes in one master file.</p>
+					<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html" target="_blank">&gt;&gt; Download Spreadsheet</a>
+				</div>
+				<div>
+					<h3>JSON</h3>
+					<p>Download a JSON file with all color schemes to use in your application.</p>
+					<a href="export/colorbrewer.json" target="_blank">&gt;&gt; Download JSON</a>
+				</div>
+				<div>
+					<h3>CSS</h3>
+					<p>Download a master CSS file containing all color schemes as CSS classes.</p>
+					<a href="export/colorbrewer.css" target="_blank">&gt;&gt; Download CSS</a>
+				</div>
+				<div>
+					<h3>Permalink</h3>
+					<p>Share a direct link to this color scheme by URL</p>
+					<input type="text" id="permalink" value="http://colorbrewer2.org/js/blahblah/" />
+				</div>
+			</div>
+			<div id="probe"></div>
+		</div>
+		<div id="footer">
+			<a href="http://axismaps.com" target="_blank"><img src="images/axis.png" alt="Axis Maps" title="Axis Maps"/></a>
+			<p>&copy; Cynthia Brewer, Mark Harrower and The Pennsylvania State University<br/>
+			<a href="http://getsatisfaction.com/axismaps/products/axismaps_colorbrewer20" target="_blank">Support</a><br/>
+			<a href="http://colorbrewer.org">Back to Flash version</a><br/>
+			<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer.html">Back to ColorBrewer 1.0</a></p>
+		</div>
+		<div id="mask"></div>
+		<div id="learnmore" style="display:none">
+			<p id="close">X</p>
+			<p id="learnmore-title">MUGGIN'</p>
+			<div id="content">
+		</div>
+		<script src="colorbrewer.js"></script>
+	</body>
+</html>
