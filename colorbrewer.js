@@ -66,7 +66,7 @@ $("#bg-color").spectrum({
 
 $("#terrain, #solid-color").change(function(){
 	if ( $("#terrain").is(":checked") ){
-		if ( !$("#terrain-img").length ) $("#map-container").prepend( $("<img id='terrain-img' src='images/terrain.jpg' />").css("left",-31).css("top",-58) );
+		if ( !$("#terrain-img").length ) $("#map-container").prepend( $("<img id='terrain-img' src='map/terrain.jpg' />").css("left",-31).css("top",-58) );
 		$("#county-map rect").css("opacity",0);
 		if ( $("#transparency-slider").position().left < 4 ){
 			$("#transparency-slider").css("left",$("#transparency-track").position().left + 43);
@@ -256,7 +256,7 @@ function updateValues()
 	});
 	str = str.replace( /\n$/, "" );
 	$("#color-values").append("<textarea readonly style='line-height:"+Math.min(24,parseInt(265/numClasses))+"px; height:"+Math.min(24,parseInt(265/numClasses))*numClasses+"px'>"+str+"</textarea>");
-	$( "#ase" ).attr( "href", "ase/" + selectedScheme + "_" + numClasses + ".ase" );
+	$( "#ase" ).attr( "href", "export/ase/" + selectedScheme + "_" + numClasses + ".ase" );
 }
 
 function getColorDisplay(c,s)
@@ -282,7 +282,7 @@ function getColorDisplay(c,s)
 }
 var highlight;
 $("#counties").svg({
-	loadURL: "map.svg",
+	loadURL: "map/map.svg",
 	onLoad: function(){
 		$("#counties svg")
 			.attr("id","county-map")
@@ -361,7 +361,7 @@ function layerChange()
 function loadOverlays(o)
 {
 	$("#overlays").svg({
-		loadURL: "overlays.svg",
+		loadURL: "map/overlays.svg",
 		onLoad: function(){
 			$("#overlays svg").attr("width","100%").attr("height","100%");
 			if ( o == "cities" ) $("#roads").hide();
