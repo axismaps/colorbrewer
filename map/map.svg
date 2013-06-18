@@ -1,5 +1,5 @@
-<svg version="1.1" class="county-map" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px">
-<rect fill="#FFFFFF" width="800" height="800"/>
+<svg version="1.1" class="county-map" xmlns="http://www.w3.org/2000/svg" width="756" height="581">
+<rect fill="#FFFFFF" width="756" height="581"/>
 <g transform="scale(1.8125,1.8125) translate(-18,-19)">
 	<path class="q6-12 q5-11 q5-10 q4-9 q3-8 q3-6 q2-5 q2-4 q1-3 q3-7" d="M436.2,5.6l0.2,3.8l-0.2,2l-1,0.4l-1,0.8l-0.2,0.2l-2,5
 		l0.2,0.4l0.4,0.2l-8.4,1.8l-1.8-10.6V8.8V8.6l0.2-1.6l1-0.2l1-1.4l1.6-0.4l8.8-1L436.2,5.6z"/>

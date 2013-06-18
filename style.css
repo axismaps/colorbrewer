@@ -14,6 +14,10 @@ a img{ border: none }
 	overflow: hidden;
 }
 
+#wrapper {
+	height: 660px;
+}
+
 #footer p{
 	font-size: 10px;
 	line-height: 12px;

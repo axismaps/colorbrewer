@@ -286,8 +286,8 @@ $("#counties").svg({
 	onLoad: function(){
 		$("#counties svg")
 			.attr("id","county-map")
-			.attr("width","100%")
-			.attr("height","100%");
+			.attr("width",756)
+			.attr("height",581);
 		$("#map-container").css("background-image","none");
 		init();
 		$("#counties path").mouseover(function(){
@@ -363,7 +363,7 @@ function loadOverlays(o)
 	$("#overlays").svg({
 		loadURL: "map/overlays.svg",
 		onLoad: function(){
-			$("#overlays svg").attr("width","100%").attr("height","100%");
+			$("#overlays svg").attr("width",756).attr("height",581);
 			if ( o == "cities" ) $("#roads").hide();
 			else $("#cities").hide();
 			$("#cities").css("fill",$("#city-color").spectrum("get").toHexString());
