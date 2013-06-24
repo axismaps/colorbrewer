@@ -84,7 +84,7 @@ a img{ border: none }
 
 .section > p, #options > p, #scheme-name{
 	padding: 0 5px;
-	margin: 0 0 5px 0;
+	margin: 0 0;
 	font-weight: bold;
 }
 
