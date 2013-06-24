@@ -125,6 +125,25 @@ a img{ border: none }
 
 #singlehue { display: none; max-width: 78px; }
 
+#scheme1 {
+	float: left;
+	margin-right: 5px;
+}
+
+#multi {
+	margin-left: 5px;
+}
+
+#scheme2 {
+	float: left;
+	padding-left: 7px;
+	border-left: 1px solid #999;
+}
+
+#single {
+	margin-left: 10px;
+}
+
 #ramps p, #singlehue p{
 	font-size: 12px;
 	margin-left: 10%;
