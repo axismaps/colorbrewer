@@ -88,7 +88,10 @@ a img{ border: none }
 	font-weight: bold;
 }
 
-#scheme{ height: 195px; }
+#scheme{ 
+	height: 200px;
+	overflow: hidden;
+}
 
 .scheme-type{ margin-left: 5px; }
 
