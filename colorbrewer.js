@@ -134,9 +134,9 @@ function showSchemes()
 	}
 	if ( selectedSchemeType == "sequential" ){
 		$("#scheme1").css("width","160px");
-		$("#multi").text("Multi-hue:");
+		$("#multi").show().text("Multi-hue:");
 		$("#scheme2").css("width","90px");
-		$("#single").text("Single hue:");
+		$("#single").show().text("Single hue:");
 		$("#singlehue").empty().css("display","inline-block");
 		
 		for ( i in schemeNames.singlehue){
