@@ -133,8 +133,12 @@ function showSchemes()
 		}));
 	}
 	if ( selectedSchemeType == "sequential" ){
-		$("#ramps").css("width","160px");
+		$("#scheme1").css("width","160px");
+		$("#multi").text("Multi-hue:");
+		$("#scheme2").css("width","90px");
+		$("#single").text("Single hue:");
 		$("#singlehue").empty().css("display","inline-block");
+		
 		for ( i in schemeNames.singlehue){
 			if ( checkFilters(schemeNames.singlehue[i]) == false ) continue;
 			var ramp = $("<div class='ramp "+schemeNames.singlehue[i]+"'></div>"),
@@ -149,8 +153,10 @@ function showSchemes()
 			}));
 		}
 	} else {
-		$("#ramps").css("width","100%");
+		$("#scheme1").css("width","100%");
+		$("#multi").hide();
 		$("#singlehue").hide();
+		$("#single").hide();
 	}
 	
 	$(".score-icon").show();
