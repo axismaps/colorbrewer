@@ -104,41 +104,54 @@
 				<div id="counties" class="svg-container"></div>
 				<div id="overlays" class="svg-container"></div>
 			</div>
+			
 			<div id="export">
-				<div id="tab"><div>EXPORT</div></div>
-				<div>
-					<h3>ArcGIS</h3>
-					<p>You can now run ColorBrewer directly inside ArcGIS 9.X thanks to the National Cancer Institute (NCI).</p>
-					<a href="http://gis.cancer.gov/tools/colortool/" target="_blank">&gt;&gt; Download ColorTool</a>
-				</div>
-				<div>
-					<h3>Adobe</h3>
-					<p>Download an Adobe Swatch Exchange (ASE) file so you can load ColorBrewer schemes into Illustrator or Photoshop.</p>
-					<a id="ase" href="#" target="_blank">&gt;&gt; Download Scheme as ASE</a>
-				</div>
-				<div>
-					<h3>Excel</h3>
-					<p>Download a Microsoft Excel file with all 165 color schemes in one master file.</p>
-					<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html" target="_blank">&gt;&gt; Download Spreadsheet</a>
-				</div>
-				<div>
-					<h3>JSON</h3>
-					<p>Download a JSON file with all color schemes to use in your application.</p>
-					<a href="export/colorbrewer.json" target="_blank">&gt;&gt; Download JSON</a>
-				</div>
-				<div>
-					<h3>CSS</h3>
-					<p>Download a master CSS file containing all color schemes as CSS classes.</p>
-					<a href="export/colorbrewer.css" target="_blank">&gt;&gt; Download CSS</a>
-				</div>
-				<div>
-					<h3>Permalink</h3>
-					<p>Share a direct link to this color scheme by URL</p>
-					<input type="text" id="permalink" value="http://colorbrewer2.org/js/blahblah/" />
-				</div>
-			</div>
+				<div id="tab">
+					<div>EXPORT</div>
+				</div> <!--end tab div-->
+				<div id="selected-data">
+					<h2>Export your selected color scheme:</h2>
+					<div id="perma">
+						<h3>Permalink</h3>
+						<p>Share a direct link to this color scheme by URL</p>
+						<input type="text" id="permalink" value="http://colorbrewer2.org/js/blahblah/" />
+					</div> <!--end perma div-->
+					<div id="adobe">
+						<h3>Adobe</h3>
+						<p>Download an Adobe Swatch Exchange (ASE) file so you can load ColorBrewer schemes into Illustrator or Photoshop.</p>
+						<a id="ase" href="#" target="_blank">&gt;&gt; Download Scheme as ASE</a>
+					</div> <!--end adobe div-->
+				</div> <!--end selected-data div-->
+				<div id="master-data">
+				<!-- <h2>Export master files containing all color scheme data:</h2> -->
+				<h2>Export master files with all color schemes:</h2>
+					<div id="excel">
+						<h3>Excel</h3>
+						<p>Download a Microsoft Excel file with all 165 color schemes in one master file.</p>
+						<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html" target="_blank">&gt;&gt; Download Spreadsheet</a>
+					</div> <!--end excel div-->
+					<div id="css">
+						<h3>CSS</h3>
+						<p>Download a master CSS file containing</br>all color schemes as CSS classes.</p>
+						<a href="export/colorbrewer.css" target="_blank">&gt;&gt; Download CSS</a>
+					</div> <!--end css div-->
+					<div id="arc">
+						<h3>ArcGIS</h3>
+						<p>You can now run ColorBrewer directly inside ArcGIS 9.X thanks to the National Cancer Institute (NCI).</p>
+						<a href="http://gis.cancer.gov/tools/colortool/" target="_blank">&gt;&gt; Download ColorTool</a>
+					</div> <!--end arc div-->
+					<div id="json">
+						<h3>JSON</h3>
+						<p>Download a JSON file with all color schemes to use in your application.</p>
+						<a href="export/colorbrewer.json" target="_blank">&gt;&gt; Download JSON</a>
+					</div> <!--end json div-->
+				</div> <!--end master-data div-->
+			</div> <!--end export div-->
+			
 			<div id="probe"></div>
-		</div>
+		
+		</div> <!--end wrapper div-->
+		
 		<div id="footer">
 			<a href="http://axismaps.com" target="_blank"><img src="images/axis.png" alt="Axis Maps" title="Axis Maps"/></a>
 			<p>&copy; Cynthia Brewer, Mark Harrower and The Pennsylvania State University<br/>
