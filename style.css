@@ -335,7 +335,7 @@ a img{ border: none }
 	height: 354px;
 	width: 530px;
 	border: 1px solid #999;
-	border-left: none;
+	//border-left: none;
 }
 
 #export #tab{
@@ -345,8 +345,8 @@ a img{ border: none }
 	width: 30px;
 	float: right;
 	margin: -1px -31px 0 0 !important;
-	border: 1px solid #999;
-	border-left: none;
+	//border: 1px solid #999;
+	//border-left: none;
 	background-color: white;
 	cursor: pointer;
 }
@@ -364,33 +364,94 @@ a img{ border: none }
 	text-indent: 25px;
 }
 
-#export > div{
-	width: 250px;
-	float: left;
-	margin-right: 15px;
-}
-
-#export h3{
-	background-color: #343e38;
-	color: white;
-	font-size: 13px;
-	margin-bottom: 0;
-	text-indent: 10px;
-}
-
 #export p{
-	margin: 5px 0 10px 5px;
+	margin: 0 0 10px 10px;
 }
 
 #export a{
 	display: block;
-	float: right;
+	float: left;
 	color: #33c;
+	margin: -7px 0 0 10px;
 }
 
 #export input{
 	width: 240px;
 	margin: -5px 0 0 5px;
+}
+
+#selected-data{
+	width: 530px;
+	height: 140px;
+	border-bottom: 1px solid #999;
+}
+#selected-data h2{
+	position: absolute;
+	top: -11px;
+	width: 530px;
+	margin-bottom: 2px;
+	background-color: rgb(68, 68, 68);
+	color: #FFF;
+	text-indent: 10px;
+	font-size: 13px;
+	float: right;
+}
+
+#selected-data h3{
+	color: #FF4500;
+	font-size: 13px;
+	margin-bottom: 0;
+	text-indent: 10px;
+}
+#perma{
+	width: 250px;
+	float: left;
+	margin-top: 10px;
+}
+#adobe{
+	width: 250px;
+	float: right;
+	margin-top: 10px;
+}
+
+#master-data{
+	width: 530px;
+	height: 210px;
+}
+#master-data h2{
+	position: absolute;
+	top: 130px;
+	width: 530px;
+	margin-bottom: 0;
+	background-color: rgb(68, 68, 68);
+	color: white;
+	text-indent: 10px;
+	font-size: 13px;
+	float: right;
+}
+#master-data h3{
+	color: orange;
+	font-size: 13px;
+	margin-bottom: 0;
+	text-indent: 10px;
+}
+#excel{
+	width: 250px;
+	float: left;
+	margin-top: 10px;
+}
+#css{
+	width: 250px;
+	float: right;
+	margin-top: 10px;
+}
+#arc{
+	width: 250px;
+	float: left;
+}
+#json{
+	width: 250px;
+	float: right;
 }
 
 a{ text-decoration: none; }
