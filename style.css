@@ -335,7 +335,8 @@ a img{ border: none }
 	height: 354px;
 	width: 530px;
 	border: 1px solid #999;
-	//border-left: none;
+	border-left: none;
+	border-right: none;
 }
 
 #export #tab{
@@ -345,8 +346,8 @@ a img{ border: none }
 	width: 30px;
 	float: right;
 	margin: -1px -31px 0 0 !important;
-	//border: 1px solid #999;
-	//border-left: none;
+	border: 1px solid #999;
+	border-left: none;
 	background-color: white;
 	cursor: pointer;
 }
@@ -383,16 +384,16 @@ a img{ border: none }
 #selected-data{
 	width: 530px;
 	height: 140px;
-	border-bottom: 1px solid #999;
 }
 #selected-data h2{
 	position: absolute;
-	top: -11px;
-	width: 530px;
+	top: -6px;
+	left: 5px;
+	width: 520px;
 	margin-bottom: 2px;
 	background-color: rgb(68, 68, 68);
 	color: #FFF;
-	text-indent: 10px;
+	text-indent: 5px;
 	font-size: 13px;
 	float: right;
 }
@@ -406,12 +407,12 @@ a img{ border: none }
 #perma{
 	width: 250px;
 	float: left;
-	margin-top: 10px;
+	margin-top: 13px;
 }
 #adobe{
 	width: 250px;
 	float: right;
-	margin-top: 10px;
+	margin-top: 13px;
 }
 
 #master-data{
@@ -421,11 +422,12 @@ a img{ border: none }
 #master-data h2{
 	position: absolute;
 	top: 130px;
-	width: 530px;
-	margin-bottom: 0;
+	left: 5px;
+	width: 520px;
+	margin-bottom: 2px;
 	background-color: rgb(68, 68, 68);
 	color: white;
-	text-indent: 10px;
+	text-indent: 5px;
 	font-size: 13px;
 	float: right;
 }
