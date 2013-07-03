@@ -29,15 +29,16 @@
 						<option name="11">11</option>
 						<option name="12">12</option>
 					</select>
-				</div>
+				</div> <!--end number div-->
+				
 				<div id="type" class="section">
 					<div class="learn-more" id="schemes-learn-more" title="Learn more"></div>
 					<p>Nature of your data:</p>
 					<input type="radio" class="scheme-type" name="scheme-type" id="sequential" checked/><label class="check-label" for="sequential">sequential</label>
 					<input type="radio" class="scheme-type" name="scheme-type" id="diverging"/><label class="check-label" for="diverging">diverging</label>
 					<input type="radio" class="scheme-type" name="scheme-type" id="qualitative"/><label class="check-label" for="qualitative">qualitative</label>
-				<!-- </select> -->
 				</div>
+				
 				<div id="scheme" class="section">
 					<p>Pick a color scheme:</p>
 					<div id="scheme1">
@@ -50,7 +51,7 @@
 					</div> <!--end scheme2 div-->
 				</div> <!--end scheme div-->
 				
-				<div id="colors" class="section">
+				<div id="colors">
 					<div id="options">
 						<div class="learn-more" id="filters-learn-more" title="Learn more"></div>
 						<p>Only show:</p>
@@ -58,14 +59,16 @@
 							<input type="checkbox" id="blindcheck" /><label for="blindcheck">colorblind safe</label><br/>
 							<input type="checkbox" id="printcheck" /><label for="printcheck">print friendly</label><br/>
 							<input type="checkbox" id="copycheck" /><label for="copycheck">photocopy safe</label>
-						</div>
+						</div> <!--end filters div-->
+						
 						<div class="learn-more" id="context-learn-more"></div>
 						<p>Context:</p>
 						<div id="layers">
 							<input type="checkbox" id="roadscheck" /><label for="roadscheck">roads</label><input class="color" type="text" id="road-color"/><br/>
 							<input type="checkbox" id="citiescheck" /><label for="citiescheck">cities</label><input class="color" type="text" id="city-color"/><br/>
 							<input type="checkbox" id="borderscheck" checked /><label for="borderscheck">borders</label><input class="color" type="text" id="border-color"/><br/>
-						</div>
+						</div> <!--end layers div-->
+						
 						<p>Background:</p>
 						<div id="background">
 							<input type="radio" name="background-radio" id="solid-color" checked/><label class="check-label" for="solid-color">solid color</label><input class="color" type="text" id="bg-color"/><br/>
@@ -75,8 +78,9 @@
 								<div id="transparency-slider"></div>
 								<p>color transparency</p>
 							</div>
-						</div>
-					</div>
+						</div> <!--end background div-->
+					</div> <!--end options div-->
+					
 					<div id="system">
 						<p id="scheme-name">BuGn</p>
 						<div style="height:27px">
@@ -92,18 +96,19 @@
 						</select>
 						<div id="color-chips"></div>
 						<div id="color-values"></div>
-					</div>
-				</div>
-			</div>
+					</div> <!--end system div-->
+				</div> <!--end colors div-->
+			</div> <!--end left div-->
+			
 			<div id="header">
 				<p id="nav"><a id="how" href="#">how to use</a> | <a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_updates.html" target="blank">updates</a> | <a id="credits" href="#">credits</a></p>
 				<h1>COLOR<span>BREWER</span> 2.0</h1>
 				<h3>color advice for cartography</h3>
-			</div>
+			</div> <!--end header-->
 			<div id="map-container">
 				<div id="counties" class="svg-container"></div>
 				<div id="overlays" class="svg-container"></div>
-			</div>
+			</div> <!--end map-container-->
 			
 			<div id="export">
 				<div id="tab">
@@ -122,8 +127,8 @@
 						<a id="ase" href="#" target="_blank">&gt;&gt; Download Scheme as ASE</a>
 					</div> <!--end adobe div-->
 				</div> <!--end selected-data div-->
+				
 				<div id="master-data">
-				<!-- <h2>Export master files containing all color scheme data:</h2> -->
 				<h2>Export master files with all color schemes:</h2>
 					<div id="excel">
 						<h3>Excel</h3>
@@ -132,7 +137,7 @@
 					</div> <!--end excel div-->
 					<div id="css">
 						<h3>CSS</h3>
-						<p>Download a master CSS file containing</br>all color schemes as CSS classes.</p>
+						<p>Download a master CSS file containing<br>all color schemes as CSS classes.</p>
 						<a href="export/colorbrewer.css" target="_blank">&gt;&gt; Download CSS</a>
 					</div> <!--end css div-->
 					<div id="arc">
@@ -158,7 +163,7 @@
 			<a href="http://getsatisfaction.com/axismaps/products/axismaps_colorbrewer20" target="_blank">Support</a><br/>
 			<a href="http://colorbrewer.org">Back to Flash version</a><br/>
 			<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer.html">Back to ColorBrewer 1.0</a></p>
-		</div>
+		</div> <!--end footer-->
 		<div id="mask"></div>
 		<div id="learnmore" style="display:none">
 			<p id="close">X</p>

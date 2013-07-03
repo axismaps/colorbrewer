@@ -91,6 +91,7 @@ a img{ border: none }
 #scheme{ 
 	height: 200px;
 	overflow: hidden;
+	border-bottom: 1px solid #999;
 }
 
 .scheme-type{ margin-left: 5px; }
@@ -128,6 +129,7 @@ a img{ border: none }
 #scheme1 {
 	float: left;
 	margin-right: 5px;
+	overflow: hidden;
 }
 
 #multi {
@@ -183,6 +185,7 @@ a img{ border: none }
 	width: 130px;
 	height: 360px;
 	padding-left: 5px;
+	float: right;
 	border-left: 1px solid #999;
 }
 
@@ -192,6 +195,7 @@ a img{ border: none }
 
 #options {
 	width: 120px;
+	padding-left: 5px;
 }
 
 #color-system{
@@ -217,8 +221,7 @@ a img{ border: none }
 }
 
 #filters, #layers, #background {
-	margin-left: 5px;
-	margin-bottom: 15px;
+	margin: 5px 0 15px 5px;
 }
 #transparency-container {
 	position: relative;
@@ -329,8 +332,8 @@ a img{ border: none }
 #export{
 	position: relative;
 	left: -265px;
-	bottom: 356px;
-	margin-bottom: -356px;
+	bottom: 355px;
+	margin-bottom: -355px;
 	background-color: white;
 	height: 354px;
 	width: 530px;
