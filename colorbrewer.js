@@ -160,6 +160,7 @@ function showSchemes()
 	}
 	
 	$(".score-icon").show();
+	$("#color-system").show();
 	if ( $(".ramp."+selectedScheme)[0] ){
 		setScheme( selectedScheme );
 	} else if ( $("#ramps").children().length ) setScheme( $("#ramps .ramp:first-child").attr("class").substr(5) );
@@ -172,9 +173,9 @@ function clearSchemes()
 	$("#color-chips").empty();
 	$("#color-values").empty();
 	$("#ramps").css("width","100%");
-	$("#singlehue").hide();
 	$("#scheme-name").html("");
 	$(".score-icon").hide();
+	$("#color-system").hide();
 	$("#ramps").append("<p>No color schemes match these criteria.</p><p>Please choose fewer data classes, a different data type, and/or fewer filtering options.</p>");
 }
 
