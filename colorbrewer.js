@@ -355,12 +355,11 @@ function layerChange()
 		break;
 		
 		case "borderscheck":
-		if ($(this).is(":checked")) $("#county-map g").children().css("stroke","inherit");
+		if ($(this).is(":checked")) $("#county-map g").children().css({"stroke":"inherit","stroke-width":"0.50"});
 		else {
 			var i=numClasses; while(i--){
-				$("#county-map g .q"+i+"-"+numClasses).css("stroke",colorbrewer[selectedScheme][numClasses][i]);
+				$("#county-map g .q"+i+"-"+numClasses).css({"stroke":colorbrewer[selectedScheme][numClasses][i],"stroke-width":"1"});
 			}
-			//$("#county-map g").css("stroke","none");
 		}
 	}
 }

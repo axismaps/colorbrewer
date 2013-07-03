@@ -467,4 +467,4 @@ a:hover{ text-decoration: underline; }
 #terrain-img{ position: absolute; }
 #road-lines{ fill: none; stroke: #f33; stroke-width: 1.5px; }
 #county-map{ fill: #999; }
-#county-map g{ stroke: #000; stroke-width: .25px; }
+#county-map g{ stroke: #000; stroke-width: .50px; }
