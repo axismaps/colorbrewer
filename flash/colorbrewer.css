@@ -1,0 +1,88 @@
+/* CSS file */
+
+global
+{
+	fontSize: 12;
+	fontFamily: "Gill Sans";
+	kerning: true;
+	fontGridFitType: subpixel;
+	color: #000000;
+	borderColor: #343E38;
+}
+HBox
+{
+	horizontalGap: 0;
+}
+VBox
+{
+	verticalGap: 0;
+}
+.stepPanel
+{
+	borderStyle: solid;
+	borderThickness: 1;
+	paddingTop: 3;
+	paddingBotton: 3;
+	borderSides: "top bottom";
+}
+CheckBox
+{
+	borderColor: #AAAAAA;
+}
+ComboBox
+{
+	borderColor: #AAAAAA;
+}
+RadioButton
+{
+	borderColor: #AAAAAA;
+}
+.learnMoreButton
+{
+	fontStyle: italic;
+	color: #7484ff;
+	fontWeight: normal;	
+	fontSize: 14;
+	themeColor: #969A97;
+}
+.topLinkButton
+{
+	themeColor: #777777;
+	cornerRadius: 0;
+	fontSize: 14;
+}
+@font-face
+{
+	fontFamily: "Gill Sans";
+	fontWeight: normal;
+	fontStyle: normal;
+	src: local("Gill Sans");
+}
+@font-face
+{
+	fontFamily: "Gill Sans";
+	fontWeight: bold;
+	fontStyle: normal;
+	src: local("Gill Sans");
+}
+Application
+{
+	backgroundGradientAlphas: 1.0, 1.0;
+	backgroundGradientColors: #F8F7F7, #D9CCC8;
+}
+HBox.sectionHeader
+{
+	backgroundColor: #969A97;
+	paddingTop: -2;
+	paddingBottom: -2;
+	paddingLeft: 3;
+	paddingRight: 3;
+}
+LinkButton.closeButton
+{
+	color: #FFFFFF;
+	fontSize: 13;
+	fontWeight: normal;
+	rollOverColor: #777777;
+	selectionColor: #777777;
+}

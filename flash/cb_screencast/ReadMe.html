@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>QuickTime Pro - Export for Web - cb_screencast</title>
+	<script src="http://www.apple.com/library/quicktime/scripts/ac_quicktime.js" language="JavaScript" type="text/javascript"></script>
+	<script src="http://www.apple.com/library/quicktime/scripts/qtp_library.js" language="JavaScript" type="text/javascript"></script>
+	<link href="http://www.apple.com/library/quicktime/stylesheets/qtp_library.css" rel="StyleSheet" type="text/css" />
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><img src="http://images.apple.com/downloads/images/essentials_quicktime20070611.png" /></td>
+		<td><h1>Instructions for posting <i>cb_screencast</i> to your website</h1></td>
+	</tr>
+</table>
+
+<div id="summary">
+	<p>You have exported <i>cb_screencast</i> using QuickTime Pro.  The following information will help you post this movie to your website.</p>
+	<p>In the same folder as this instructional HTML file, QuickTime Pro has placed various versions of your movie optimized for web-delivery. Also in that folder is a reference movie, which selects the best version for your users' various devices and connection speeds. By including this reference movie in your HTML page, you can ensure a quality video experience on your site.</p>
+	<p>Here's a preview (requires Internet connection):</p>
+</div>
+
+<script type="text/javascript"><!--
+	QT_WritePoster_XHTML('Click to Play', 'cb_screencast-poster.jpg',
+		'cb_screencast.mov',
+		'762', '496', '',
+		'controller', 'true',
+		'autoplay', 'true',
+		'bgcolor', 'black',
+		'scale', 'aspect');
+//-->
+</script>
+<noscript>
+<object width="762" height="496" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+	<param name="src" value="cb_screencast-poster.jpg" />
+	<param name="href" value="cb_screencast.mov" />
+	<param name="target" value="myself" />
+	<param name="controller" value="false" />
+	<param name="autoplay" value="false" />
+	<param name="scale" value="aspect" />
+	<embed width="762" height="496" type="video/quicktime" pluginspage="http://www.apple.com/quicktime/download/"
+		src="cb_screencast-poster.jpg"
+		href="cb_screencast.mov"
+		target="myself"
+		controller="false"
+		autoplay="false"
+		scale="aspect">
+	</embed>
+</object>
+</noscript>
+
+<div id="textembed">
+	<p>Use the following HTML code to embed your movie into your web page.</p>
+	<h3>Important Notes:</h3>
+	<ul>
+		<li>To make your media viewable on the Internet, your media assets (movies, poster image) must be placed on a publicly accessible server.</li>
+		<li>The URL parameters must be modified if your media assets are served from a different location than your web page.</li>
+		<li>The movie URL parameters must always point to the reference movie (<a href="cb_screencast.mov">cb_screencast.mov</a>) rather than a source movie.</li>
+		<li>The reference movie must be kept in the same folder as the source movies.</li>
+		<li>Source movie names cannot be changed, but you can change the name of the reference movie (remember to change it in the HTML code as well).</li>
+		<li>Please note, to properly validate as XHTML, the <code>&lt;style&gt;</code> tag and the first <code>&lt;script&gt;</code> tag should be placed within your page's <code>&lt;head&gt;</code> tag.</li>
+	</ul>
+	</p>
+
+<p>Use this code in the <code>&lt;head&gt;</code> of your web page:</p>
+<textarea rows="5" cols="80">
+&lt;script src="http://www.apple.com/library/quicktime/scripts/ac_quicktime.js" language="JavaScript" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://www.apple.com/library/quicktime/scripts/qtp_library.js" language="JavaScript" type="text/javascript"&gt;&lt;/script&gt;
+&lt;link href="http://www.apple.com/library/quicktime/stylesheets/qtp_library.css" rel="StyleSheet" type="text/css" /&gt;
+</textarea>
+
+<p>Use this code in the <code>&lt;body&gt;</code> of your web page:</p>
+<textarea rows="40" cols="80">
+&lt;script type=&quot;text/javascript&quot;&gt;&lt;!--
+	QT_WritePoster_XHTML('Click to Play', 'cb_screencast-poster.jpg',
+		'cb_screencast.mov',
+		'762', '496', '',
+		'controller', 'true',
+		'autoplay', 'true',
+		'bgcolor', 'black',
+		'scale', 'aspect');
+//--&gt;
+&lt;/script&gt;
+&lt;noscript&gt;
+&lt;object width=&quot;762&quot; height=&quot;496&quot; classid=&quot;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&quot; codebase=&quot;http://www.apple.com/qtactivex/qtplugin.cab&quot;&gt;
+	&lt;param name=&quot;src&quot; value=&quot;cb_screencast-poster.jpg&quot; /&gt;
+	&lt;param name=&quot;href&quot; value=&quot;cb_screencast.mov&quot; /&gt;
+	&lt;param name=&quot;target&quot; value=&quot;myself&quot; /&gt;
+	&lt;param name=&quot;controller&quot; value=&quot;false&quot; /&gt;
+	&lt;param name=&quot;autoplay&quot; value=&quot;false&quot; /&gt;
+	&lt;param name=&quot;scale&quot; value=&quot;aspect&quot; /&gt;
+	&lt;embed width=&quot;762&quot; height=&quot;496&quot; type=&quot;video/quicktime&quot; pluginspage=&quot;http://www.apple.com/quicktime/download/&quot;
+		src=&quot;cb_screencast-poster.jpg&quot;
+		href=&quot;cb_screencast.mov&quot;
+		target=&quot;myself&quot;
+		controller=&quot;false&quot;
+		autoplay=&quot;false&quot;
+		scale=&quot;aspect&quot;&gt;
+	&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/noscript&gt;
+</textarea>
+</div>
+
+<div id="exportlog">
+<h3>Exported:</h3>
+<ul>
+	<li>Reference Movie:
+		<ul><li><a href="cb_screencast.mov">cb_screencast.mov</a></li></ul>
+	</li>
+	<li>Poster Frame:
+		<ul><li><a href="cb_screencast-poster.jpg">cb_screencast-poster.jpg</a></li></ul>
+	</li>
+	<li>Versions:
+		<ul>
+		<li><a href="cb_screencast-desktop.m4v">cb_screencast-desktop.m4v</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+</body>
+</html>
