@@ -14,6 +14,10 @@ a img{ border: none }
 	overflow: hidden;
 }
 
+#wrapper {
+	position: relative;
+}
+
 #footer p{
 	font-size: 10px;
 	line-height: 12px;
@@ -91,7 +95,6 @@ a img{ border: none }
 #scheme{ 
 	height: 200px;
 	overflow: hidden;
-	border-bottom: 1px solid #999;
 }
 
 .scheme-type{ margin-left: 5px; }
@@ -182,11 +185,14 @@ a img{ border: none }
 }
 
 #system{
-	width: 130px;
-	height: 360px;
+	position: absolute;
+	top: 295px;
+	left: 145px;
+	width: 122px;
+	height: 357px;
 	padding-left: 5px;
 	float: right;
-	border-left: 1px solid #999;
+	border-top: 1px solid #999
 }
 
 #scheme-name {
@@ -194,8 +200,13 @@ a img{ border: none }
 }
 
 #options {
-	width: 120px;
-	padding-left: 5px;
+	position: absolute;
+	top: 295px;
+	height: 357px;
+	width: 142px;
+	padding-left: 2px;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
 }
 
 #color-system{
@@ -331,10 +342,11 @@ a img{ border: none }
 
 #export{
 	position: absolute;
-	top: 302px;
-	background-color: white;
+	left: -265px;
+	top: 295px;
 	height: 357px;
 	width: 530px;
+	background-color: white;
 	border: 1px solid #999;
 	border-left: none;
 	border-right: none;

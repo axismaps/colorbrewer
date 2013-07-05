@@ -423,14 +423,13 @@ $("#learnmore #close, #mask").click(function(){
 	$("#learnmore, #mask").hide();
 });
 
-$( "#export #tab" ).toggle( function()
-{
-	$( "#export" ).animate( { "left" : "265px" } );
-},
-function()
-{
-	$( "#export" ).animate( { "left" : "-265px" } );
-})
+$( "#export #tab" ).toggle( 
+	function(){
+		$( "#export" ).animate( { "left" : "265px" } );
+	},
+	function(){
+		$( "#export" ).animate( { "left" : "-265px" } );
+	})
 
 function rgb2cmyk (r,g,b) {
 	var computedC = 0;
