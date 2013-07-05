@@ -330,11 +330,10 @@ a img{ border: none }
 }
 
 #export{
-	position: relative;
-	left: -265px;
-	bottom: 355px;
+	position: absolute;
+	top: 302px;
 	background-color: white;
-	height: 353px;
+	height: 357px;
 	width: 530px;
 	border: 1px solid #999;
 	border-left: none;
