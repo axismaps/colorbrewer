@@ -137,8 +137,8 @@ function showSchemes()
 		$("#multi").show().text("Multi-hue:");
 		$("#scheme2").css("width","90px");
 		$("#single").show().text("Single hue:");
-		$("#singlehue").empty().css("display","inline-block");
 		
+		$("#singlehue").empty().css("display","inline-block");
 		for ( i in schemeNames.singlehue){
 			if ( checkFilters(schemeNames.singlehue[i]) == false ) continue;
 			var ramp = $("<div class='ramp "+schemeNames.singlehue[i]+"'></div>"),
@@ -155,7 +155,7 @@ function showSchemes()
 	} else {
 		$("#scheme1").css("width","100%");
 		$("#multi").hide();
-		$("#singlehue").hide();
+		$("#singlehue").empty();
 		$("#single").hide();
 	}
 	
