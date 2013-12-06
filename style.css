@@ -386,10 +386,13 @@ a img{ border: none }
 	margin: 0 0 10px 0;
 }
 
-#export a, #download a{
+#download a{
 	display: block;
 	color: #33c;
 	margin: -7px 0 0 10px;
+}
+#export a{
+	color: #33c;
 }
 
 #download a{
