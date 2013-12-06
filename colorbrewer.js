@@ -133,7 +133,11 @@ function showSchemes()
 		}));
 	}
 	if ( selectedSchemeType == "sequential" ){
-		$("#ramps").css("width","160px");
+		$("#scheme1").css("width","160px");
+		$("#multi").show().text("Multi-hue:");
+		$("#scheme2").css("width","90px");
+		$("#single").show().text("Single hue:");
+		
 		$("#singlehue").empty().css("display","inline-block");
 		for ( i in schemeNames.singlehue){
 			if ( checkFilters(schemeNames.singlehue[i]) == false ) continue;
@@ -149,11 +153,14 @@ function showSchemes()
 			}));
 		}
 	} else {
-		$("#ramps").css("width","100%");
-		$("#singlehue").hide();
+		$("#scheme1").css("width","100%");
+		$("#multi").hide();
+		$("#singlehue").empty();
+		$("#single").hide();
 	}
 	
 	$(".score-icon").show();
+	$("#color-system").show();
 	if ( $(".ramp."+selectedScheme)[0] ){
 		setScheme( selectedScheme );
 	} else if ( $("#ramps").children().length ) setScheme( $("#ramps .ramp:first-child").attr("class").substr(5) );
@@ -166,9 +173,9 @@ function clearSchemes()
 	$("#color-chips").empty();
 	$("#color-values").empty();
 	$("#ramps").css("width","100%");
-	$("#singlehue").hide();
 	$("#scheme-name").html("");
 	$(".score-icon").hide();
+	$("#color-system").hide();
 	$("#ramps").append("<p>No color schemes match these criteria.</p><p>Please choose fewer data classes, a different data type, and/or fewer filtering options.</p>");
 }
 
@@ -182,7 +189,21 @@ function setScheme(s)
 	applyColors();
 	drawColorChips();
 	$("#permalink").val("http://colorbrewer2.org/?type="+selectedSchemeType+"&scheme="+selectedScheme+"&n="+numClasses);
-	
+
+	var jsonString = "[";
+	for ( var i = 0; i < numClasses; i ++ ){
+		jsonString += "'" + colorbrewer[selectedScheme][numClasses][i] + "'";
+		if ( i < numClasses - 1 ) jsonString += ",";
+	}
+	jsonString += "]";
+	$("#copy-json input").val(jsonString);
+	var cssString = "";
+	for ( var i = 0; i < numClasses; i ++ ){
+		cssString += "."+selectedScheme+" .q"+i+"-"+numClasses+"{fill:" + colorbrewer[selectedScheme][numClasses][i] + "}";
+		if ( i < numClasses - 1 ) cssString += " ";
+	}
+	$("#copy-css input").val(cssString);
+
 	$(".score-icon").attr("class","score-icon");
 	var f = checkColorblind(s);
 	$("#blind-icon").addClass( !f ? "bad" : (f == 1 ? "ok" : "maybe") ).attr("title",numClasses+"-class "+selectedScheme + " is " + getWord(f)+"color blind friendly");
@@ -304,7 +325,7 @@ $("#counties").svg({
 			$("#probe").show();
 		});
 		$("#counties path").mousemove(function(e){
-			$("#probe").css({left: Math.min($("#wrapper").offset().left + 920,e.pageX + 10), top: e.pageY - 75 });
+			$("#probe").css({left: Math.min(920,e.pageX - $("#wrapper").offset().left + 10), top: e.pageY - $("#wrapper").offset().top - 75 });
 		});
 		$("#counties path").mouseout(function(){$("#probe").hide();highlight.remove();});
 	}
@@ -348,12 +369,11 @@ function layerChange()
 		break;
 		
 		case "borderscheck":
-		if ($(this).is(":checked")) $("#county-map g").children().css("stroke","inherit");
+		if ($(this).is(":checked")) $("#county-map g").children().css({"stroke":"inherit","stroke-width":"0.50"});
 		else {
 			var i=numClasses; while(i--){
-				$("#county-map g .q"+i+"-"+numClasses).css("stroke",colorbrewer[selectedScheme][numClasses][i]);
+				$("#county-map g .q"+i+"-"+numClasses).css({"stroke":colorbrewer[selectedScheme][numClasses][i],"stroke-width":"1"});
 			}
-			//$("#county-map g").css("stroke","none");
 		}
 	}
 }
@@ -371,7 +391,7 @@ function loadOverlays(o)
 		}
 	});
 }
-$(".learn-more, #how, #credits").click(function(e){
+$(".learn-more, #how, #credits, #downloads").click(function(e){
 	e.stopPropagation();
 	var page;
 	switch( $(this).attr("id") ){
@@ -399,6 +419,11 @@ $(".learn-more, #how, #credits").click(function(e){
 		$("#learnmore-title").html("CREDITS");
 		page = "credits.html";
 		break;
+
+		case "downloads":
+		$("#learnmore-title").html("DOWNLOADS");
+		page = "downloads.html";
+		break;
 		
 		case "context-learn-more":
 		$("#learnmore-title").html("MAP CONTEXT and BACKGROUND");
@@ -407,7 +432,7 @@ $(".learn-more, #how, #credits").click(function(e){
 	}
 	if ( page ){
 		$("#learnmore #content").load("learnmore/"+page,function(){
-			$("#learnmore").show().css("margin-top",-$("#learnmore").height()/2);
+			$("#learnmore").show().css("margin-top",($("#wrapper").height()/2-$("#learnmore").height()/2));
 		});
 		$("#mask").show();
 	}
@@ -417,14 +442,13 @@ $("#learnmore #close, #mask").click(function(){
 	$("#learnmore, #mask").hide();
 });
 
-$( "#export #tab" ).toggle( function()
-{
-	$( "#export" ).animate( { "left" : "265px" } );
-},
-function()
-{
-	$( "#export" ).animate( { "left" : "-265px" } );
-})
+$( "#export #tab" ).toggle( 
+	function(){
+		$( "#export" ).animate( { "left" : "265px" } );
+	},
+	function(){
+		$( "#export" ).animate( { "left" : "0px" } );
+	})
 
 function rgb2cmyk (r,g,b) {
 	var computedC = 0;

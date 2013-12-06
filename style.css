@@ -15,7 +15,11 @@ a img{ border: none }
 }
 
 #wrapper {
+<<<<<<< HEAD
 	height: 660px;
+=======
+	position: relative;
+>>>>>>> development
 }
 
 #footer p{
@@ -88,11 +92,14 @@ a img{ border: none }
 
 .section > p, #options > p, #scheme-name{
 	padding: 0 5px;
-	margin: 0 0 5px 0;
+	margin: 0 0;
 	font-weight: bold;
 }
 
-#scheme{ height: 195px; }
+#scheme{ 
+	height: 200px;
+	overflow: hidden;
+}
 
 .scheme-type{ margin-left: 5px; }
 
@@ -125,6 +132,26 @@ a img{ border: none }
 }
 
 #singlehue { display: none; max-width: 78px; }
+
+#scheme1 {
+	float: left;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#multi {
+	margin-left: 5px;
+}
+
+#scheme2 {
+	float: left;
+	padding-left: 7px;
+	border-left: 1px solid #999;
+}
+
+#single {
+	margin-left: 10px;
+}
 
 #ramps p, #singlehue p{
 	font-size: 12px;
@@ -162,10 +189,14 @@ a img{ border: none }
 }
 
 #system{
-	width: 130px;
-	height: 360px;
+	position: absolute;
+	top: 295px;
+	left: 145px;
+	width: 122px;
+	height: 357px;
 	padding-left: 5px;
-	border-left: 1px solid #999;
+	float: right;
+	border-top: 1px solid #999
 }
 
 #scheme-name {
@@ -173,7 +204,13 @@ a img{ border: none }
 }
 
 #options {
-	width: 120px;
+	position: absolute;
+	top: 295px;
+	height: 357px;
+	width: 142px;
+	padding-left: 2px;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
 }
 
 #color-system{
@@ -199,8 +236,7 @@ a img{ border: none }
 }
 
 #filters, #layers, #background {
-	margin-left: 5px;
-	margin-bottom: 15px;
+	margin: 5px 0 15px 5px;
 }
 #transparency-container {
 	position: relative;
@@ -209,9 +245,9 @@ a img{ border: none }
 #transparency-container p{
 	margin:0;
 	position: absolute;
+	left: 5px;
 	bottom: 5px;
 	width:100%;
-	text-align:center;
 	font-size: 11px;
 }
 #transparency-track{
@@ -259,7 +295,7 @@ a img{ border: none }
 	position: absolute;
 	z-index: 9999;
 	left: 50%;
-	top: 50%;
+	top: 0;
 	width: 550px;
 	margin-left: -275px;
 	background-color: #fff;
@@ -309,15 +345,15 @@ a img{ border: none }
 }
 
 #export{
-	position: relative;
-	left: -265px;
-	bottom: 356px;
-	margin-bottom: -356px;
-	background-color: white;
+	position: absolute;
+	left: 0;
+	top: 295px;
 	height: 354px;
-	width: 530px;
+	width: 265px;
+	background-color: white;
 	border: 1px solid #999;
 	border-left: none;
+	border-right: none;
 }
 
 #export #tab{
@@ -346,33 +382,119 @@ a img{ border: none }
 	text-indent: 25px;
 }
 
-#export > div{
-	width: 250px;
-	float: left;
-	margin-right: 15px;
-}
-
-#export h3{
-	background-color: #343e38;
-	color: white;
-	font-size: 13px;
-	margin-bottom: 0;
-	text-indent: 10px;
-}
-
 #export p{
-	margin: 5px 0 10px 5px;
+	margin: 0 0 5px 10px;
 }
 
-#export a{
+#download p{
+	margin: 0 0 10px 0;
+}
+
+#download a{
 	display: block;
-	float: right;
+	color: #33c;
+	margin: -7px 0 0 10px;
+}
+#export a{
 	color: #33c;
 }
 
+#download a{
+	margin-left: 0;
+}
 #export input{
-	width: 240px;
-	margin: -5px 0 0 5px;
+	width: 230px;
+	margin: -5px 0 0 10px;
+}
+
+#selected-data{
+	width: 100%;
+	height: 100%;
+}
+#selected-data h2{
+	position: absolute;
+	top: -6px;
+	left: 5px;
+	width: 260px;
+	margin-bottom: 2px;
+	background-color: rgb(68, 68, 68);
+	color: #FFF;
+	text-indent: 5px;
+	font-size: 13px;
+	float: right;
+}
+
+#selected-data h3{
+	/*color: #FF4500;*/
+	font-size: 13px;
+	margin-bottom: 0;
+	text-indent: 10px;
+	margin-top: 5px;
+}
+#selected-data > div{
+	width: 250px;
+	margin-bottom: 10px;
+}
+#perma{
+	float: left;
+	margin-top: 25px;
+}
+#adobe{
+	float: left;
+}
+#export .copy input{
+	margin-top: 5px;
+}
+#copy-json{ float: left; }
+#copy-css{ float: left; }
+#export #copy-json p{ margin-bottom: 0; }
+#export #copy-css p{ margin-bottom: 0; }
+#master-data{
+	width: 530px;
+	height: 210px;
+}
+#master-data h2{
+	position: absolute;
+	top: 145px;
+	left: 5px;
+	width: 520px;
+	margin-bottom: 2px;
+	background-color: rgb(68, 68, 68);
+	color: white;
+	text-indent: 5px;
+	font-size: 13px;
+	float: right;
+}
+#master-data h3{
+	/*color: orange;*/
+	font-size: 13px;
+	margin-bottom: 0;
+	text-indent: 10px;
+	margin-top: 10px;
+}
+#excel{
+	width: 250px;
+	height: 90px;
+}
+#css{
+	width: 250px;
+	height: 90px;
+}
+#download #css a{
+	margin-bottom: 5px;
+}
+#arc{
+	width: 250px;
+	margin-bottom: 30px;
+}
+#json, #js, #css, #carto{
+	width: 250px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
 }
 
 a{ text-decoration: none; }
@@ -383,4 +505,4 @@ a:hover{ text-decoration: underline; }
 #terrain-img{ position: absolute; }
 #road-lines{ fill: none; stroke: #f33; stroke-width: 1.5px; }
 #county-map{ fill: #999; }
-#county-map g{ stroke: #000; stroke-width: .25px; }
+#county-map g{ stroke: #000; stroke-width: .50px; }

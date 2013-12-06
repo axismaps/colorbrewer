@@ -1,0 +1,181 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font: 13px/18px Helvetica, Arial, sans-serif;
+}
+
+#header{
+	float: left;
+	height: 68px;
+	background-color: #343e38;
+	width: 756px;
+	border-right: 2px solid #333;
+	border-left: 2px solid #333;
+}
+#header h1{
+	color: white;
+}
+
+#left {
+	width: 275px;
+	height: 650px;
+	float: left;
+	background: #f7f7f7; /* Old browsers */
+	background: -moz-linear-gradient(top, #f7f7f7 0%, #d9ccc8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#d9ccc8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f7f7f7 0%,#d9ccc8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f7f7f7 0%,#d9ccc8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f7f7f7 0%,#d9ccc8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f7f7f7 0%,#d9ccc8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#d9ccc8',GradientType=0 ); /* IE6-9 */
+	border-left: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+
+.section {
+	border-top: 2px solid #333;
+	padding: 3px 0;
+}
+
+.section > p, #options > p{
+	background-color: #969a97;
+	width: 240px;
+	color: white;
+	padding: 0 5px;
+	margin: 0 0 5px 0;
+	font-weight: bold;
+}
+
+.section > select{
+	margin-left: 25px;
+}
+
+#options > p {
+	width: 100%;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+#ramps, #singlehue {
+	height: 200px;
+	padding: 0 5px;
+	display: inline-block;
+}
+
+#singlehue { display: none; max-width: 78px; border-left: 1px solid #999 }
+
+#ramps p, #singlehue p{
+	font-size: 12px;
+	text-align: center;
+}
+
+.ramp {
+	float: left;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.ramp:hover {
+	background-color: #ccc;
+}
+
+.ramp.selected {
+	background-color: #999;
+}
+
+.ramp rect, #color-chips rect {
+	stroke: #333;
+	stroke-width: .5px;
+}
+
+#filters{
+	padding-left: 25px;
+}
+
+#color-values, #color-chips, #options {
+	float: left;
+	margin-left: 5px;
+}
+
+#color-values{ width: 80px; }
+#color-values p {
+	margin: 0;
+	color: #24662e;
+}
+#options label{
+	font-size: 12px;
+}
+#system input, #system label{
+	margin:0 3px 0 0;
+}
+
+#layers, #background {
+	border-left: 1px solid #999;
+	padding-left: 5px;
+}
+#transparency-container {
+	position: relative;
+	height: 50px;
+}
+#transparency-container p{
+	margin:0;
+	position: absolute;
+	bottom: 5px;
+	width:100%;
+	text-align:center;
+	font-size: 11px;
+}
+#transparency-track{
+	width: 90px;
+	height: 1px;
+	background-color: #eee;
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	position: absolute;
+	top: 20px;
+	left: 25px;
+}
+#transparency-slider{
+	position: absolute;
+	width: 5px;
+	height: 10px;
+	left: 23px;
+	top: 15px;
+	background-color: #eee;
+	border: 1px solid #999;
+	cursor: pointer;
+	border-radius: 2px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#transparency-slider:hover{
+	background-color: #ccc;
+}
+
+.color{ float: right; }
+
+#probe{
+	position: absolute;
+	display: none;
+	background-color: rgba(50,50,50,.85);
+	color: white;
+}
+#probe p{
+	margin: 5px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 14px;
+}
+
+#overlays{ pointer-events: none; }
+#map-container{ margin-left: 275px; position: relative; width: 756px; height: 580px; border: 2px solid #333; overflow: hidden;}
+.svg-container { position: absolute; width: 100%; height: 100%; overflow: hidden; }
+#terrain-img{ position: absolute; }
+#road-lines{ fill: none; stroke: #f33; stroke-width: 1.5px; }
+#county-map{ fill: #999; }
+#county-map g{ stroke: #000; stroke-width: .25px; }
