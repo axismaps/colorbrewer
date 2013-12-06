@@ -291,7 +291,7 @@ a img{ border: none }
 	position: absolute;
 	z-index: 9999;
 	left: 50%;
-	top: 50%;
+	top: 0;
 	width: 550px;
 	margin-left: -275px;
 	background-color: #fff;
@@ -342,10 +342,10 @@ a img{ border: none }
 
 #export{
 	position: absolute;
-	left: -265px;
+	left: 0;
 	top: 295px;
 	height: 354px;
-	width: 530px;
+	width: 265px;
 	background-color: white;
 	border: 1px solid #999;
 	border-left: none;
@@ -382,26 +382,34 @@ a img{ border: none }
 	margin: 0 0 5px 10px;
 }
 
-#export a{
+#download p{
+	margin: 0 0 10px 0;
+}
+
+#export a, #download a{
 	display: block;
 	color: #33c;
 	margin: -7px 0 0 10px;
 }
 
+#download a{
+	margin-left: 0;
+}
+#export h3, #download h3{ color: #333; }
 #export input{
 	width: 230px;
 	margin: -5px 0 0 10px;
 }
 
 #selected-data{
-	width: 530px;
-	height: 155px;
+	width: 100%;
+	height: 100%;
 }
 #selected-data h2{
 	position: absolute;
 	top: -6px;
 	left: 5px;
-	width: 520px;
+	width: 260px;
 	margin-bottom: 2px;
 	background-color: rgb(68, 68, 68);
 	color: #FFF;
@@ -411,7 +419,7 @@ a img{ border: none }
 }
 
 #selected-data h3{
-	color: #FF4500;
+	/*color: #FF4500;*/
 	font-size: 13px;
 	margin-bottom: 0;
 	text-indent: 10px;
@@ -419,22 +427,20 @@ a img{ border: none }
 }
 #selected-data > div{
 	width: 250px;
+	margin-bottom: 20px;
 }
 #perma{
-	height: 75px;
 	float: left;
 	margin-top: 25px;
 }
 #adobe{
-	height: 75px;
-	float: right;
-	margin-top: 25px;
+	float: left;
 }
 #export .copy input{
 	margin-top: 5px;
 }
 #copy-json{ float: left; }
-#copy-css{ float: right; }
+#copy-css{ float: left; }
 #master-data{
 	width: 530px;
 	height: 210px;
@@ -452,7 +458,7 @@ a img{ border: none }
 	float: right;
 }
 #master-data h3{
-	color: orange;
+	/*color: orange;*/
 	font-size: 13px;
 	margin-bottom: 0;
 	text-indent: 10px;
@@ -460,19 +466,18 @@ a img{ border: none }
 }
 #excel{
 	width: 250px;
-	margin-top: 25px;
 	height: 80px;
 }
 #css{
-	margin-top: 25px;
 	width: 250px;
 	height: 80px;
 }
-#export #css a{
-	margin-bottom: 4px;
+#download #css a{
+	margin-bottom: 5px;
 }
 #arc{
 	width: 250px;
+	margin-bottom: 30px;
 }
 #json, #js, #css, #carto{
 	width: 250px;

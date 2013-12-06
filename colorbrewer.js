@@ -391,7 +391,7 @@ function loadOverlays(o)
 		}
 	});
 }
-$(".learn-more, #how, #credits").click(function(e){
+$(".learn-more, #how, #credits, #downloads").click(function(e){
 	e.stopPropagation();
 	var page;
 	switch( $(this).attr("id") ){
@@ -419,6 +419,11 @@ $(".learn-more, #how, #credits").click(function(e){
 		$("#learnmore-title").html("CREDITS");
 		page = "credits.html";
 		break;
+
+		case "downloads":
+		$("#learnmore-title").html("DOWNLOADS");
+		page = "downloads.html";
+		break;
 		
 		case "context-learn-more":
 		$("#learnmore-title").html("MAP CONTEXT and BACKGROUND");
@@ -427,7 +432,7 @@ $(".learn-more, #how, #credits").click(function(e){
 	}
 	if ( page ){
 		$("#learnmore #content").load("learnmore/"+page,function(){
-			$("#learnmore").show().css("margin-top",-$("#learnmore").height()/2);
+			$("#learnmore").show().css("margin-top",($("#wrapper").height()/2-$("#learnmore").height()/2));
 		});
 		$("#mask").show();
 	}
@@ -442,7 +447,7 @@ $( "#export #tab" ).toggle(
 		$( "#export" ).animate( { "left" : "265px" } );
 	},
 	function(){
-		$( "#export" ).animate( { "left" : "-265px" } );
+		$( "#export" ).animate( { "left" : "0px" } );
 	})
 
 function rgb2cmyk (r,g,b) {
