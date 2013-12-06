@@ -344,7 +344,7 @@ a img{ border: none }
 	position: absolute;
 	left: -265px;
 	top: 295px;
-	height: 357px;
+	height: 354px;
 	width: 530px;
 	background-color: white;
 	border: 1px solid #999;
@@ -379,24 +379,23 @@ a img{ border: none }
 }
 
 #export p{
-	margin: 0 0 10px 10px;
+	margin: 0 0 5px 10px;
 }
 
 #export a{
 	display: block;
-	float: left;
 	color: #33c;
 	margin: -7px 0 0 10px;
 }
 
 #export input{
-	width: 240px;
-	margin: -5px 0 0 5px;
+	width: 230px;
+	margin: -5px 0 0 10px;
 }
 
 #selected-data{
 	width: 530px;
-	height: 140px;
+	height: 155px;
 }
 #selected-data h2{
 	position: absolute;
@@ -416,25 +415,33 @@ a img{ border: none }
 	font-size: 13px;
 	margin-bottom: 0;
 	text-indent: 10px;
+	margin-top: 5px;
+}
+#selected-data > div{
+	width: 250px;
 }
 #perma{
-	width: 250px;
+	height: 75px;
 	float: left;
-	margin-top: 13px;
+	margin-top: 25px;
 }
 #adobe{
-	width: 250px;
+	height: 75px;
 	float: right;
-	margin-top: 13px;
+	margin-top: 25px;
 }
-
+#export .copy input{
+	margin-top: 5px;
+}
+#copy-json{ float: left; }
+#copy-css{ float: right; }
 #master-data{
 	width: 530px;
 	height: 210px;
 }
 #master-data h2{
 	position: absolute;
-	top: 130px;
+	top: 145px;
 	left: 5px;
 	width: 520px;
 	margin-bottom: 2px;
@@ -449,23 +456,31 @@ a img{ border: none }
 	font-size: 13px;
 	margin-bottom: 0;
 	text-indent: 10px;
+	margin-top: 10px;
 }
 #excel{
 	width: 250px;
-	float: left;
-	margin-top: 10px;
+	margin-top: 25px;
+	height: 80px;
 }
 #css{
+	margin-top: 25px;
 	width: 250px;
-	float: right;
-	margin-top: 10px;
+	height: 80px;
+}
+#export #css a{
+	margin-bottom: 4px;
 }
 #arc{
 	width: 250px;
+}
+#json, #js, #css, #carto{
+	width: 250px;
+}
+.left {
 	float: left;
 }
-#json{
-	width: 250px;
+.right {
 	float: right;
 }
 

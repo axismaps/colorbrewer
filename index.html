@@ -119,38 +119,53 @@
 					<h2>Export your selected color scheme:</h2>
 					<div id="perma">
 						<h3>Permalink</h3>
-						<p>Share a direct link to this color scheme by URL</p>
+						<p>Share a direct link to this color scheme.</p>
 						<input type="text" id="permalink" value="http://colorbrewer2.org/js/blahblah/" />
 					</div> <!--end perma div-->
 					<div id="adobe">
 						<h3>Adobe</h3>
-						<p>Download an Adobe Swatch Exchange (ASE) file so you can load ColorBrewer schemes into Illustrator or Photoshop.</p>
+						<p>Download an Adobe Swatch Exchange (ASE) file for Illustrator or Photoshop.</p>
 						<a id="ase" href="#" target="_blank">&gt;&gt; Download Scheme as ASE</a>
 					</div> <!--end adobe div-->
+					<div class="copy" id="copy-json">
+						<h3>Copy JavaScript</h3>
+						<input type="text" id="permalink" value="JSON!" />
+					</div>
+					<div class="copy" id="copy-css">
+						<h3>Copy CSS</h3>
+						<input type="text" id="permalink" value="CSS!" />
+					</div>
 				</div> <!--end selected-data div-->
 				
 				<div id="master-data">
 				<h2>Export master files with all color schemes:</h2>
-					<div id="excel">
-						<h3>Excel</h3>
-						<p>Download a Microsoft Excel file with all 165 color schemes in one master file.</p>
-						<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html" target="_blank">&gt;&gt; Download Spreadsheet</a>
-					</div> <!--end excel div-->
-					<div id="css">
-						<h3>CSS</h3>
-						<p>Download a master CSS file containing<br>all color schemes as CSS classes.</p>
-						<a href="export/colorbrewer.css" target="_blank">&gt;&gt; Download CSS</a>
-					</div> <!--end css div-->
-					<div id="arc">
-						<h3>ArcGIS</h3>
-						<p>You can now run ColorBrewer directly inside ArcGIS 9.X thanks to the National Cancer Institute (NCI).</p>
-						<a href="http://gis.cancer.gov/tools/colortool/" target="_blank">&gt;&gt; Download ColorTool</a>
-					</div> <!--end arc div-->
-					<div id="json">
-						<h3>JSON</h3>
-						<p>Download a JSON file with all color schemes to use in your application.</p>
-						<a href="export/colorbrewer.json" target="_blank">&gt;&gt; Download JSON</a>
-					</div> <!--end json div-->
+					<div class="left">
+						<div id="excel">
+							<h3>Excel</h3>
+							<p>Download a Microsoft Excel file with all 165 color schemes in one master file.</p>
+							<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html" target="_blank">&gt;&gt; Download Spreadsheet</a>
+						</div> <!--end excel div-->
+						<div id="arc">
+							<h3>ArcGIS</h3>
+							<p>Download a ColorBrewer style file for use in ArcGIS.</p>
+							<a href="http://arcscripts.esri.com/details.asp?dbid=14403" target="_blank">&gt;&gt; Download styles</a>
+						</div> <!--end arc div-->
+					</div>
+					<div class="right">
+						<div id="css">
+							<h3>CSS, JSON, and JavaScript</h3>
+							<p>All color schemes for use on the web.</p>
+							<a href="export/colorbrewer.css" target="_blank">&gt;&gt; Download CSS</a>
+							<a href="export/colorbrewer.json" target="_blank">&gt;&gt; Download JSON</a>
+							<a href="export/colorbrewer.js" target="_blank">&gt;&gt; Download JavaScript variable</a>
+						</div> <!--end css div-->
+						
+						<div id="carto">
+							<h3>CartoCSS</h3>
+							<p>CartoCSS styles for use in applications such as TileMill.</p>
+							<a href="export/colorbrewer.js" target="_blank">&gt;&gt; Download CartoCSS</a>
+						</div>
+					</div>
 				</div> <!--end master-data div-->
 			</div> <!--end export div-->
 			

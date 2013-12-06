@@ -189,7 +189,21 @@ function setScheme(s)
 	applyColors();
 	drawColorChips();
 	$("#permalink").val("http://colorbrewer2.org/?type="+selectedSchemeType+"&scheme="+selectedScheme+"&n="+numClasses);
-	
+
+	var jsonString = "[";
+	for ( var i = 0; i < numClasses; i ++ ){
+		jsonString += "'" + colorbrewer[selectedScheme][numClasses][i] + "'";
+		if ( i < numClasses - 1 ) jsonString += ",";
+	}
+	jsonString += "]";
+	$("#copy-json input").val(jsonString);
+	var cssString = "";
+	for ( var i = 0; i < numClasses; i ++ ){
+		cssString += "."+selectedScheme+" .q"+i+"-"+numClasses+"{fill:" + colorbrewer[selectedScheme][numClasses][i] + "}";
+		if ( i < numClasses - 1 ) cssString += " ";
+	}
+	$("#copy-css input").val(cssString);
+
 	$(".score-icon").attr("class","score-icon");
 	var f = checkColorblind(s);
 	$("#blind-icon").addClass( !f ? "bad" : (f == 1 ? "ok" : "maybe") ).attr("title",numClasses+"-class "+selectedScheme + " is " + getWord(f)+"color blind friendly");
@@ -311,7 +325,7 @@ $("#counties").svg({
 			$("#probe").show();
 		});
 		$("#counties path").mousemove(function(e){
-			$("#probe").css({left: Math.min($("#wrapper").offset().left + 920,e.pageX + 10), top: e.pageY - 75 });
+			$("#probe").css({left: Math.min(920,e.pageX - $("#wrapper").offset().left + 10), top: e.pageY - $("#wrapper").offset().top - 75 });
 		});
 		$("#counties path").mouseout(function(){$("#probe").hide();highlight.remove();});
 	}
