@@ -395,7 +395,6 @@ a img{ border: none }
 #download a{
 	margin-left: 0;
 }
-#export h3, #download h3{ color: #333; }
 #export input{
 	width: 230px;
 	margin: -5px 0 0 10px;
@@ -427,7 +426,7 @@ a img{ border: none }
 }
 #selected-data > div{
 	width: 250px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 #perma{
 	float: left;
@@ -441,6 +440,8 @@ a img{ border: none }
 }
 #copy-json{ float: left; }
 #copy-css{ float: left; }
+#export #copy-json p{ margin-bottom: 0; }
+#export #copy-css p{ margin-bottom: 0; }
 #master-data{
 	width: 530px;
 	height: 210px;
