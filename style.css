@@ -241,9 +241,9 @@ a img{ border: none }
 #transparency-container p{
 	margin:0;
 	position: absolute;
+	left: 5px;
 	bottom: 5px;
 	width:100%;
-	text-align:center;
 	font-size: 11px;
 }
 #transparency-track{
