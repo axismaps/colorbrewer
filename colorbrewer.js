@@ -272,8 +272,9 @@ function updateValues()
 {
 	$("#color-values").empty();
 	var str = "";
-	$("#color-chips rect").each(function(){
-		str += getColorDisplay($(this).css("fill")) + "\n";
+	var s = $("#color-system").val().toLowerCase();
+	$("#color-chips rect").each(function(i){
+		str += ( s == "cmyk" ? getCMYK(selectedScheme,numClasses,i) : getColorDisplay($(this).css("fill")) ) + "\n";
 	});
 	str = str.replace( /\n$/, "" );
 	$("#color-values").append("<textarea readonly style='line-height:"+Math.min(24,parseInt(265/numClasses))+"px; height:"+Math.min(24,parseInt(265/numClasses))*numClasses+"px'>"+str+"</textarea>");
@@ -301,14 +302,17 @@ function getColorDisplay(c,s)
 		return cmyk[0] + "," + cmyk[1] + "," + cmyk[2] + "," + cmyk[3];
 	}
 }
+function getCMYK( scheme, classes, n ){
+	return cmyk[scheme][classes][n].toString();
+}
 var highlight;
 $("#counties").svg({
 	loadURL: "map/map.svg",
 	onLoad: function(){
 		$("#counties svg")
 			.attr("id","county-map")
-			.attr("width","100%")
-			.attr("height","100%");
+			.attr("width",756)
+			.attr("height",581);
 		$("#map-container").css("background-image","none");
 		init();
 		$("#counties path").mouseover(function(){
@@ -318,7 +322,7 @@ $("#counties").svg({
 			$("#probe").empty().append(
 				"<p>"+selectedScheme+" class " + cl +"<br/>"+
 				"RGB: " + getColorDisplay(c,"rgb")+"<br/>"+
-				"CMYK: " + getColorDisplay(c,"cmyk")+"<br/>"+
+				"CMYK: " + getCMYK(selectedScheme,numClasses,cl-1)+"<br/>"+
 				"HEX: " + getColorDisplay(c,"hex")+"</p>"
 			);
 			highlight = $(this).clone().css({"pointer-events":"none","stroke":"#000","stroke-width":"2"}).appendTo("#county-map g");
@@ -383,7 +387,7 @@ function loadOverlays(o)
 	$("#overlays").svg({
 		loadURL: "map/overlays.svg",
 		onLoad: function(){
-			$("#overlays svg").attr("width","100%").attr("height","100%");
+			$("#overlays svg").attr("width",756).attr("height",581);
 			if ( o == "cities" ) $("#roads").hide();
 			else $("#cities").hide();
 			$("#cities").css("fill",$("#city-color").spectrum("get").toHexString());

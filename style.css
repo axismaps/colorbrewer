@@ -15,7 +15,11 @@ a img{ border: none }
 }
 
 #wrapper {
+<<<<<<< HEAD
+	height: 660px;
+=======
 	position: relative;
+>>>>>>> development
 }
 
 #footer p{
