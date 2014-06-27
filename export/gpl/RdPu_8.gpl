@@ -1,0 +1,12 @@
+GIMP Palette
+Name: CB_seq_RdPu_8
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+255 247 243  seq_RdPu_8_01
+253 224 221  seq_RdPu_8_02
+252 197 192  seq_RdPu_8_03
+250 159 181  seq_RdPu_8_04
+247 104 161  seq_RdPu_8_05
+221  52 151  seq_RdPu_8_06
+174   1 126  seq_RdPu_8_07
+122   1 119  seq_RdPu_8_08

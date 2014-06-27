@@ -1,0 +1,8 @@
+GIMP Palette
+Name: CB_qual_Paired_4
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+166 206 227  qual_Paired_4_01
+ 31 120 180  qual_Paired_4_02
+178 223 138  qual_Paired_4_03
+ 51 160  44  qual_Paired_4_04

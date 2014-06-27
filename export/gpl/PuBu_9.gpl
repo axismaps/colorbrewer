@@ -1,0 +1,13 @@
+GIMP Palette
+Name: CB_seq_PuBu_9
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+255 247 251  seq_PuBu_9_01
+236 231 242  seq_PuBu_9_02
+208 209 230  seq_PuBu_9_03
+166 189 219  seq_PuBu_9_04
+116 169 207  seq_PuBu_9_05
+ 54 144 192  seq_PuBu_9_06
+  5 112 176  seq_PuBu_9_07
+  4  90 141  seq_PuBu_9_08
+  2  56  88  seq_PuBu_9_09

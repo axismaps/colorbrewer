@@ -1,0 +1,9 @@
+GIMP Palette
+Name: CB_qual_Set1_5
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+228  26  28  qual_Set1_5_01
+ 55 126 184  qual_Set1_5_02
+ 77 175  74  qual_Set1_5_03
+152  78 163  qual_Set1_5_04
+255 127   0  qual_Set1_5_05

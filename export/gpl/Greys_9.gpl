@@ -1,0 +1,13 @@
+GIMP Palette
+Name: CB_seq_Greys_9
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+255 255 255  seq_Greys_9_01
+240 240 240  seq_Greys_9_02
+217 217 217  seq_Greys_9_03
+189 189 189  seq_Greys_9_04
+150 150 150  seq_Greys_9_05
+115 115 115  seq_Greys_9_06
+ 82  82  82  seq_Greys_9_07
+ 37  37  37  seq_Greys_9_08
+  0   0   0  seq_Greys_9_09

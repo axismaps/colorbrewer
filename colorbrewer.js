@@ -279,6 +279,7 @@ function updateValues()
 	str = str.replace( /\n$/, "" );
 	$("#color-values").append("<textarea readonly style='line-height:"+Math.min(24,parseInt(265/numClasses))+"px; height:"+Math.min(24,parseInt(265/numClasses))*numClasses+"px'>"+str+"</textarea>");
 	$( "#ase" ).attr( "href", "export/ase/" + selectedScheme + "_" + numClasses + ".ase" );
+	$( "#gpl" ).attr( "href", "export/gpl/" + selectedScheme + "_" + numClasses + ".gpl" );
 }
 
 function getColorDisplay(c,s)

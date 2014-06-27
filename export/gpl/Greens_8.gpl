@@ -1,0 +1,12 @@
+GIMP Palette
+Name: CB_seq_Greens_8
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+247 252 245  seq_Greens_8_01
+229 245 224  seq_Greens_8_02
+199 233 192  seq_Greens_8_03
+161 217 155  seq_Greens_8_04
+116 196 118  seq_Greens_8_05
+ 65 171  93  seq_Greens_8_06
+ 35 139  69  seq_Greens_8_07
+  0  90  50  seq_Greens_8_08

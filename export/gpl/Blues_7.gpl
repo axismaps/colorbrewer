@@ -1,0 +1,11 @@
+GIMP Palette
+Name: CB_seq_Blues_7
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+239 243 255  seq_Blues_7_01
+198 219 239  seq_Blues_7_02
+158 202 225  seq_Blues_7_03
+107 174 214  seq_Blues_7_04
+ 66 146 198  seq_Blues_7_05
+ 33 113 181  seq_Blues_7_06
+  8  69 148  seq_Blues_7_07

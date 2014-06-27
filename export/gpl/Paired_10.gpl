@@ -1,0 +1,14 @@
+GIMP Palette
+Name: CB_qual_Paired_10
+Columns: 3
+# This color palette was developed by Cynthia Brewer (see http://colorbrewer2.org/).
+166 206 227  qual_Paired_10_01
+ 31 120 180  qual_Paired_10_02
+178 223 138  qual_Paired_10_03
+ 51 160  44  qual_Paired_10_04
+251 154 153  qual_Paired_10_05
+227  26  28  qual_Paired_10_06
+253 191 111  qual_Paired_10_07
+255 127   0  qual_Paired_10_08
+202 178 214  qual_Paired_10_09
+106  61 154  qual_Paired_10_10
