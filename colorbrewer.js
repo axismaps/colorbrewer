@@ -285,10 +285,11 @@ function updateValues()
 		var val = ( s == "cmyk" ? getCMYK(selectedScheme,numClasses,i) : getColorDisplay($(this).css("fill")) );
 		str += val + "\n";
 
+		var jsonVal = getColorDisplay($(this).css("fill"));
 		if ( s == "hex" ) {
-			jsonString += "'" + val + "'";
+			jsonString += "'" + jsonVal + "'";
 		} else {
-			jsonString += "'rgb(" + val + ")'";
+			jsonString += "'rgb(" + jsonVal + ")'";
 		}
 		if ( i < numClasses - 1 ) jsonString += ",";
 	});
@@ -312,15 +313,11 @@ function getColorDisplay(c,s)
 		if ( rgb ) return rgbToHex(rgb.r,rgb.g,rgb.b);
 		return c;
 	}
-	if ( s=="rgb" ){
+	if ( s=="rgb" || s=="cmyk" ){
 		if (!rgb) rgb = hexToRgb(c);
 		return rgb.r + "," + rgb.g + "," + rgb.b;
 	}
-	if ( s=="cmyk" ){
-		if (!rgb) rgb = hexToRgb(c);
-		var cmyk = rgb2cmyk(rgb.r,rgb.g,rgb.b);
-		return cmyk[0] + "," + cmyk[1] + "," + cmyk[2] + "," + cmyk[3];
-	}
+
 }
 function getCMYK( scheme, classes, n ){
 	return cmyk[scheme][classes][n].toString();
