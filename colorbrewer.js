@@ -6,7 +6,7 @@ var schemeNames = {sequential: ["BuGn","BuPu","GnBu","OrRd","PuBu","PuBuGn","PuR
 var visibleMap,
 	selectedScheme = "BuGn",
 	numClasses = 3;
-	
+
 $("#num-classes").change(function(){
 	setNumClasses($(this).val());
 });
@@ -71,13 +71,13 @@ $("#terrain, #solid-color").change(function(){
 		if ( $("#transparency-slider").position().left < 4 ){
 			$("#transparency-slider").css("left",$("#transparency-track").position().left + 43);
 			$("#county-map g").css("opacity",.5);
-		} 
+		}
 	} else {
 		$("#county-map rect").css("opacity",1);
 		if ( $("#transparency-slider").position().left == $("#transparency-track").position().left + 43 ){
 			$("#transparency-slider").css("left",3);
 			$("#county-map g").css("opacity",1);
-		} 
+		}
 	}
 });
 
@@ -92,7 +92,7 @@ var selectedSchemeType;
 function setSchemeType(type)
 {
 	selectedSchemeType = type;
-	
+
 	$( "#num-classes option" ).removeAttr( "disabled" );
 	switch( selectedSchemeType )
 	{
@@ -137,7 +137,7 @@ function showSchemes()
 		$("#multi").show().text("Multi-hue:");
 		$("#scheme2").css("width","90px");
 		$("#single").show().text("Single hue:");
-		
+
 		$("#singlehue").empty().css("display","inline-block");
 		for ( i in schemeNames.singlehue){
 			if ( checkFilters(schemeNames.singlehue[i]) == false ) continue;
@@ -158,7 +158,7 @@ function showSchemes()
 		$("#singlehue").empty();
 		$("#single").hide();
 	}
-	
+
 	$(".score-icon").show();
 	$("#color-system").show();
 	if ( $(".ramp."+selectedScheme)[0] ){
@@ -190,13 +190,8 @@ function setScheme(s)
 	drawColorChips();
 	$("#permalink").val("http://colorbrewer2.org/?type="+selectedSchemeType+"&scheme="+selectedScheme+"&n="+numClasses);
 
-	var jsonString = "[";
-	for ( var i = 0; i < numClasses; i ++ ){
-		jsonString += "'" + colorbrewer[selectedScheme][numClasses][i] + "'";
-		if ( i < numClasses - 1 ) jsonString += ",";
-	}
-	jsonString += "]";
-	$("#copy-json input").val(jsonString);
+	updateValues();
+
 	var cssString = "";
 	for ( var i = 0; i < numClasses; i ++ ){
 		cssString += "."+selectedScheme+" .q"+i+"-"+numClasses+"{fill:" + colorbrewer[selectedScheme][numClasses][i] + "}";
@@ -213,13 +208,25 @@ function setScheme(s)
 	$("#screen-icon").addClass( !f ? "bad" : (f == 1 ? "ok" : "maybe") ).attr("title",numClasses+"-class "+selectedScheme + " is " + getWord(f)+"LCD friendly");
 	f = checkPrint(s);
 	$("#print-icon").addClass( !f ? "bad" : (f == 1 ? "ok" : "maybe") ).attr("title",numClasses+"-class "+selectedScheme + " is " + getWord(f)+"print friendly");
-	
+
 	function getWord(w){
 		if ( !w ) return "not ";
 		if ( w == 1 ) return "";
 		if ( w == 2 ) return "possibly not ";
 	}
 }
+
+/* function getJSON()
+{
+	var jsonString = "[";
+	for ( var i = 0; i < numClasses; i ++ ){
+		jsonString += "'" + colorbrewer[selectedScheme][numClasses][i] + "'";
+		if ( i < numClasses - 1 ) jsonString += ",";
+	}
+	jsonString += "]";
+
+	return jsonString;
+} */
 
 function checkFilters(scheme,f)
 {
@@ -273,13 +280,25 @@ function updateValues()
 	$("#color-values").empty();
 	var str = "";
 	var s = $("#color-system").val().toLowerCase();
+	var jsonString = "[";
 	$("#color-chips rect").each(function(i){
-		str += ( s == "cmyk" ? getCMYK(selectedScheme,numClasses,i) : getColorDisplay($(this).css("fill")) ) + "\n";
+		var val = ( s == "cmyk" ? getCMYK(selectedScheme,numClasses,i) : getColorDisplay($(this).css("fill")) );
+		str += val + "\n";
+
+		if ( s == "hex" ) {
+			jsonString += "'" + val + "'";
+		} else {
+			jsonString += "'rgb(" + val + ")'";
+		}
+		if ( i < numClasses - 1 ) jsonString += ",";
 	});
+	jsonString += "]";
 	str = str.replace( /\n$/, "" );
+
 	$("#color-values").append("<textarea readonly style='line-height:"+Math.min(24,parseInt(265/numClasses))+"px; height:"+Math.min(24,parseInt(265/numClasses))*numClasses+"px'>"+str+"</textarea>");
 	$( "#ase" ).attr( "href", "export/ase/" + selectedScheme + "_" + numClasses + ".ase" );
 	$( "#gpl" ).attr( "href", "export/gpl/" + selectedScheme + "_" + numClasses + ".gpl" );
+	$("#copy-json input").val(jsonString);
 }
 
 function getColorDisplay(c,s)
@@ -361,7 +380,7 @@ function layerChange()
 			$("#roads").hide();
 		}
 		break;
-		
+
 		case "citiescheck":
 		if ( $(this).is(":checked") ){
 			if ( !$("#overlays").children().length )
@@ -372,7 +391,7 @@ function layerChange()
 			$("#cities").hide();
 		}
 		break;
-		
+
 		case "borderscheck":
 		if ($(this).is(":checked")) $("#county-map g").children().css({"stroke":"inherit","stroke-width":"0.50"});
 		else {
@@ -404,22 +423,22 @@ $(".learn-more, #how, #credits, #downloads").click(function(e){
 		$("#learnmore-title").html("NUMBER OF DATA CLASSES");
 		page = "number.html";
 		break;
-		
+
 		case "schemes-learn-more":
 		$("#learnmore-title").html("TYPES OF COLOR SCHEMES");
 		page = "schemes.html";
 		break;
-		
+
 		case "filters-learn-more":
 		$("#learnmore-title").html("USABILITY ICONS");
 		page = "usability.html";
 		break;
-		
+
 		case "how":
 		$("#learnmore-title").html("HOW TO USE: MAP DIAGNOSTICS");
 		page = "howtouse.html";
 		break;
-		
+
 		case "credits":
 		$("#learnmore-title").html("CREDITS");
 		page = "credits.html";
@@ -429,7 +448,7 @@ $(".learn-more, #how, #credits, #downloads").click(function(e){
 		$("#learnmore-title").html("DOWNLOADS");
 		page = "downloads.html";
 		break;
-		
+
 		case "context-learn-more":
 		$("#learnmore-title").html("MAP CONTEXT and BACKGROUND");
 		page = "context.html";
@@ -447,7 +466,7 @@ $("#learnmore #close, #mask").click(function(){
 	$("#learnmore, #mask").hide();
 });
 
-$( "#export #tab" ).toggle( 
+$( "#export #tab" ).toggle(
 	function(){
 		$( "#export" ).animate( { "left" : "265px" } );
 	},
@@ -460,24 +479,24 @@ function rgb2cmyk (r,g,b) {
 	var computedM = 0;
 	var computedY = 0;
 	var computedK = 0;
-	
+
 	// BLACK
 	if (r==0 && g==0 && b==0) {
 	computedK = 1;
 	return [0,0,0,100];
 	}
-	
+
 	computedC = 1 - (r/255);
 	computedM = 1 - (g/255);
 	computedY = 1 - (b/255);
-	
+
 	var minCMY = Math.min(computedC,
 			  Math.min(computedM,computedY));
 	computedC = (computedC - minCMY) / (1 - minCMY) ;
 	computedM = (computedM - minCMY) / (1 - minCMY) ;
 	computedY = (computedY - minCMY) / (1 - minCMY) ;
 	computedK = minCMY;
-	
+
 	return [Math.round(computedC*100),Math.round(computedM*100),Math.round(computedY*100),Math.round(computedK*100)];
 }
 function rgbToHex(r, g, b) {
