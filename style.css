@@ -24,7 +24,9 @@ a img{ border: none }
 	line-height: 12px;
 	margin: 0;
 }
-#footer img{ float: right }
+#footer img.logo{ float: right }
+
+#footer img.gh{ width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;}
 
 #header{
 	float: left;
