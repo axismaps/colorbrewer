@@ -189,6 +189,7 @@ function setScheme(s)
 	applyColors();
 	drawColorChips();
 	$("#permalink").val("http://colorbrewer2.org/?type="+selectedSchemeType+"&scheme="+selectedScheme+"&n="+numClasses);
+	window.location.hash = "type="+selectedSchemeType+"&scheme="+selectedScheme+"&n="+numClasses;
 
 	updateValues();
 
