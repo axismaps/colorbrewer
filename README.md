@@ -1,7 +1,7 @@
 ColorBrewer
 ==============
 
-http://colorbrewer2.org/
+https://colorbrewer2.org/
 
 Web tool for guidance in choosing choropleth map color schemes, based on the research of [Dr. Cynthia Brewer](http://www.personal.psu.edu/cab38/). Built and maintained by [Axis Maps](http://axismaps.com).
 
