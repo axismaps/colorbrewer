@@ -334,14 +334,13 @@ $("#counties").svg({
 		$("#map-container").css("background-image","none");
 		init();
 		$("#counties path").mouseover(function(){
-			var c = $(this).css("fill");
 			var cl = $(this).attr("class").match(new RegExp("q[0-9]+-"+numClasses))[0];
 			cl = parseInt(cl.substring(cl.indexOf("q")+1,cl.indexOf("-"))) + 1;
 			$("#probe").empty().append(
 				"<p>"+selectedScheme+" class " + cl +"<br/>"+
-				"RGB: " + getColorDisplay(c,"rgb")+"<br/>"+
+				"RGB: " + getColorDisplay(colorbrewer[selectedScheme][numClasses][cl-1],"rgb")+"<br/>"+
 				"CMYK: " + getCMYK(selectedScheme,numClasses,cl-1)+"<br/>"+
-				"HEX: " + getColorDisplay(c,"hex")+"</p>"
+				"HEX: " + getColorDisplay(colorbrewer[selectedScheme][numClasses][cl-1],"hex")+"</p>"
 			);
 			highlight = $(this).clone().css({"pointer-events":"none","stroke":"#000","stroke-width":"2"}).appendTo("#county-map g");
 			$("#probe").show();
