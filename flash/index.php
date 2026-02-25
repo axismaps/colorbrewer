@@ -128,7 +128,7 @@ var requiredRevision = 124;
 </noscript>
 <div style="float: left; margin-top: 15px">&copy; Cynthia Brewer, Mark Harrower and The Pennsylvania State University<br />
 <a href="http://getsatisfaction.com/axismaps/products/axismaps_colorbrewer20" target="_blank">Support</a><br />
-<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer.html">Back to ColorBrewer 1.0</a></div>
+<a href="https://web.archive.org/web/20230101000000/http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer.html">Back to ColorBrewer 1.0</a></div>
 <div style="float: right; margin-top: 10px"><a href="http://www.axismaps.com"><img alt="Axis Maps Logo" src="images/axis_logo.png" height="35" style="border:0"/></a></div>
 <script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
